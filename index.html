@@ -5,6 +5,60 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Greek Grub — Private Chef Services for the 2028 Los Angeles Olympics</title>
 <meta name="description" content="Dedicated private chef and food service for USC Row houses during the 2028 Los Angeles Olympics. Licensed, certified, and embedded on The Row since 2011.">
+<link rel="canonical" href="https://la28.greekgrub.com/">
+<link rel="icon" type="image/png" href="images/logo.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://la28.greekgrub.com/">
+<meta property="og:title" content="Greek Grub — Private Chef for USC Row Houses | 2028 LA Olympics">
+<meta property="og:description" content="Dedicated private chef and food service for USC Row houses during the 2028 Los Angeles Olympics. Licensed, certified, and on The Row since 2011.">
+<meta property="og:image" content="https://la28.greekgrub.com/images/hero-food.jpg">
+<meta property="og:site_name" content="Greek Grub">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Greek Grub — Private Chef for USC Row Houses | 2028 LA Olympics">
+<meta name="twitter:description" content="Dedicated private chef and food service for USC Row houses during the 2028 Los Angeles Olympics.">
+<meta name="twitter:image" content="https://la28.greekgrub.com/images/hero-food.jpg">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FoodService",
+  "name": "Greek Grub",
+  "description": "Private chef and food service company providing dedicated meal service for USC Row fraternity and sorority houses. Serving The Row since 2011, now offering full-service catering for the 2028 Los Angeles Olympics.",
+  "url": "https://greekgrub.com",
+  "logo": "https://la28.greekgrub.com/images/logo.png",
+  "image": "https://la28.greekgrub.com/images/hero-food.jpg",
+  "foundingDate": "2011",
+  "founder": {
+    "@type": "Person",
+    "name": "Brian Johnston",
+    "jobTitle": "Founder & Executive Chef"
+  },
+  "areaServed": [
+    {
+      "@type": "Place",
+      "name": "USC Row, University Park, Los Angeles, CA"
+    },
+    {
+      "@type": "Place",
+      "name": "Los Angeles, California"
+    }
+  ],
+  "serviceType": ["Private Chef", "Event Catering", "Corporate Hospitality", "Olympic Hospitality"],
+  "knowsAbout": ["2028 Los Angeles Olympics", "USC Greek Life", "Private Chef Services", "LA28"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Los Angeles",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+  }
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
@@ -395,17 +449,17 @@
     color: var(--charcoal-light);
   }
 
-  /* ── CTA ─────────────────────────────── */
+  /* ── CTA / Contact Form ─────────────── */
   .cta {
     background: linear-gradient(165deg, var(--charcoal) 0%, #1a1a1a 100%);
     color: var(--white);
     padding: 88px 48px;
-    text-align: center;
   }
 
   .cta-inner {
-    max-width: 640px;
+    max-width: 720px;
     margin: 0 auto;
+    text-align: center;
   }
 
   .cta h2 {
@@ -418,83 +472,116 @@
 
   .cta h2 .accent { color: var(--yellow); }
 
-  .cta p {
+  .cta > .cta-inner > p {
     font-size: 17px;
     line-height: 1.8;
     opacity: 0.75;
     margin-bottom: 48px;
   }
 
-  .cta-contact {
+  .contact-form {
+    text-align: left;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .form-group {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 12px;
+    gap: 6px;
   }
 
-  .cta-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    font-weight: 700;
+  .form-group.full-width {
+    grid-column: 1 / -1;
   }
 
-  .cta-role {
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--yellow);
+  .form-group label {
+    font-size: 13px;
     font-weight: 600;
-    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.6);
   }
 
-  .cta-links {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .cta-links a {
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
     color: var(--white);
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 500;
-    transition: color 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: border-color 0.2s, background 0.2s;
+    -webkit-appearance: none;
   }
 
-  .cta-links a:hover { color: var(--yellow); }
-
-  .cta-links svg {
-    width: 18px;
-    height: 18px;
-    fill: none;
-    stroke: var(--yellow);
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: rgba(255,255,255,0.3);
   }
 
-  .cta-btn {
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--yellow);
+    background: rgba(255,255,255,0.12);
+  }
+
+  .form-group select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.5)' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+  }
+
+  .form-group select option {
+    background: var(--charcoal);
+    color: var(--white);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .form-submit {
     display: inline-block;
-    margin-top: 36px;
+    margin-top: 24px;
     padding: 18px 48px;
     background: var(--red);
     color: var(--white);
-    text-decoration: none;
+    border: none;
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 600;
     border-radius: 8px;
     letter-spacing: 0.5px;
+    cursor: pointer;
     transition: background 0.2s, transform 0.2s;
+    width: 100%;
   }
 
-  .cta-btn:hover {
+  .form-submit:hover {
     background: #d42530;
     transform: translateY(-2px);
+  }
+
+  /* ── Phone SVG (anti-scrape) ────────── */
+  .phone-svg {
+    display: inline-block;
+    vertical-align: middle;
+    height: 14px;
   }
 
   /* ── Footer ──────────────────────────── */
@@ -532,7 +619,8 @@
     .about-inner { flex-direction: column; text-align: center; }
 
     .cta { padding: 56px 24px; }
-    .cta-links { flex-direction: column; gap: 16px; }
+    .form-row { grid-template-columns: 1fr; gap: 12px; }
+    .form-submit { padding: 16px 32px; }
   }
 </style>
 </head>
@@ -545,8 +633,7 @@
     <div class="logo-text">GREEK GRUB</div>
   </a>
   <div class="header-contact">
-    <a href="tel:3109096106">310-909-6106</a>
-    <a href="mailto:brian@greekgrub.com">brian@greekgrub.com</a>
+    <span><svg class="phone-svg" viewBox="0 0 130 16" xmlns="http://www.w3.org/2000/svg"><text x="0" y="13" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#2B5EA7">310-909-6106</text></svg></span>
     <a href="https://greekgrub.com">greekgrub.com</a>
   </div>
 </header>
@@ -565,7 +652,7 @@
 </section>
 
 <!-- ════════ THREE PILLARS ════════ -->
-<section class="pillars">
+<section class="pillars" id="why-us">
   <div class="pillars-grid">
 
     <div class="pillar">
@@ -599,7 +686,7 @@
 </section>
 
 <!-- ════════ CAPABILITIES ════════ -->
-<section class="capabilities">
+<section class="capabilities" id="services">
   <div class="section-label">Full-Service</div>
   <h2 class="section-title">What Your Guests Can Expect</h2>
   <ul class="cap-list">
@@ -657,7 +744,7 @@
 </section>
 
 <!-- ════════ ABOUT ════════ -->
-<section class="about">
+<section class="about" id="about">
   <div class="about-inner">
     <div class="headshot">
       <img src="images/brian-headshot.jpg" alt="Brian Johnston, Founder and Executive Chef of Greek Grub">
@@ -670,30 +757,65 @@
   </div>
 </section>
 
-<!-- ════════ CTA ════════ -->
-<section class="cta">
+<!-- ════════ CONTACT FORM ════════ -->
+<section class="cta" id="contact">
   <div class="cta-inner">
     <h2>Let's Plan <span class="accent">Your Menu.</span></h2>
     <p>Every house and every group is different — and that's exactly how we like it. Tell us about your group, your dates, and your vision, and we'll put together a custom plan that makes food the easiest part of your Olympic experience.</p>
-    <div class="cta-contact">
-      <div class="cta-name">Brian Johnston</div>
-      <div class="cta-role">Founder &amp; Executive Chef</div>
-      <div class="cta-links">
-        <a href="tel:3109096106">
-          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          310-909-6106
-        </a>
-        <a href="mailto:brian@greekgrub.com">
-          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          brian@greekgrub.com
-        </a>
-        <a href="https://greekgrub.com">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          greekgrub.com
-        </a>
+
+    <!-- TODO: Replace action="#" with your form endpoint (e.g. https://formspree.io/f/YOUR_ID) -->
+    <form class="contact-form" action="#" method="POST">
+      <input type="hidden" name="_subject" value="New Olympic Catering Inquiry — Greek Grub">
+      <input type="hidden" name="_cc" value="greekgrub@ajdjent.com">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Name *</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="you@company.com" required>
+        </div>
       </div>
-      <a href="mailto:brian@greekgrub.com?subject=Olympic%20Catering%20Inquiry%20%E2%80%94%20Greek%20Grub" class="cta-btn">Get in Touch</a>
-    </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+        </div>
+        <div class="form-group">
+          <label for="org">Organization / House</label>
+          <input type="text" id="org" name="organization" placeholder="Company or house name">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="group-size">Estimated Group Size</label>
+          <select id="group-size" name="group_size">
+            <option value="" disabled selected>Select group size</option>
+            <option value="1-10">1 – 10 guests</option>
+            <option value="11-25">11 – 25 guests</option>
+            <option value="26-50">26 – 50 guests</option>
+            <option value="50+">50+ guests</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="dates">Dates of Interest</label>
+          <input type="text" id="dates" name="dates" placeholder="e.g. July 14 – 28, 2028">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group full-width">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us about your group, event, dietary needs, or anything else…"></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="form-submit">Send Inquiry</button>
+    </form>
   </div>
 </section>
 
