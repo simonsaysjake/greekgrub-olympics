@@ -58,22 +58,15 @@
   .logo-icon {
     width: 52px;
     height: 52px;
-    background: var(--blue);
     border-radius: 50% 50% 50% 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
     position: relative;
   }
 
-  .logo-icon span {
-    color: var(--yellow);
-    font-family: 'Playfair Display', serif;
-    font-weight: 800;
-    font-size: 14px;
-    letter-spacing: -0.5px;
-    line-height: 1.1;
-    text-align: center;
+  .logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .logo-text {
@@ -109,54 +102,25 @@
     overflow: hidden;
   }
 
-  .hero-image-placeholder {
+  .hero-image {
     width: 100%;
     height: 380px;
-    background: linear-gradient(180deg, rgba(30,74,133,0.15) 0%, rgba(30,74,133,0.6) 100%),
-                linear-gradient(135deg, #3a6fb5 0%, #1e4a85 50%, #2b5ea7 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
+    overflow: hidden;
   }
 
-  .hero-image-placeholder::before {
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+  }
+
+  .hero-image::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 40px,
-      rgba(255,255,255,0.02) 40px,
-      rgba(255,255,255,0.02) 80px
-    );
-  }
-
-  .hero-image-label {
-    background: rgba(255,255,255,0.12);
-    border: 2px dashed rgba(255,255,255,0.3);
-    border-radius: 12px;
-    padding: 24px 40px;
-    text-align: center;
-    backdrop-filter: blur(4px);
-    z-index: 1;
-  }
-
-  .hero-image-label span {
-    display: block;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    opacity: 0.7;
-    margin-bottom: 6px;
-  }
-
-  .hero-image-label p {
-    font-size: 15px;
-    opacity: 0.55;
-    max-width: 320px;
+    background: linear-gradient(180deg, rgba(30,74,133,0.1) 0%, rgba(30,74,133,0.45) 100%);
   }
 
   .hero-content {
@@ -365,32 +329,17 @@
     opacity: 0.88;
   }
 
-  .olympic-image-placeholder {
+  .olympic-image {
     width: 100%;
     aspect-ratio: 4/3;
-    background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%);
-    border: 2px dashed rgba(255,255,255,0.2);
     border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 24px;
+    overflow: hidden;
   }
 
-  .olympic-image-placeholder span {
-    display: block;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    opacity: 0.5;
-    margin-bottom: 6px;
-  }
-
-  .olympic-image-placeholder p {
-    font-size: 14px;
-    opacity: 0.35;
+  .olympic-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   /* ── About ───────────────────────────── */
@@ -407,26 +356,20 @@
     gap: 48px;
   }
 
-  .headshot-placeholder {
+  .headshot {
     flex-shrink: 0;
     width: 160px;
     height: 160px;
-    background: var(--blue);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    overflow: hidden;
     border: 4px solid var(--yellow);
   }
 
-  .headshot-placeholder span {
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: rgba(255,255,255,0.5);
-    padding: 16px;
+  .headshot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
   }
 
   .about-text h3 {
@@ -574,7 +517,7 @@
     .header-contact { gap: 16px; font-size: 13px; }
 
     .hero-content { padding: 40px 24px 56px; }
-    .hero-image-placeholder { height: 240px; }
+    .hero-image { height: 240px; }
 
     .pillars { padding: 56px 24px; }
     .pillars-grid { grid-template-columns: 1fr; gap: 24px; }
@@ -598,7 +541,7 @@
 <!-- ════════ HEADER ════════ -->
 <header class="site-header">
   <a href="https://greekgrub.com" class="logo">
-    <div class="logo-icon"><span>greek<br>grub</span></div>
+    <div class="logo-icon"><img src="images/logo.png" alt="Greek Grub"></div>
     <div class="logo-text">GREEK GRUB</div>
   </a>
   <div class="header-contact">
@@ -610,11 +553,8 @@
 
 <!-- ════════ HERO ════════ -->
 <section class="hero">
-  <div class="hero-image-placeholder">
-    <div class="hero-image-label">
-      <span>Hero Image</span>
-      <p>Family-style food spread — warm, abundant, residential feel</p>
-    </div>
+  <div class="hero-image">
+    <img src="images/hero-food.jpg" alt="Chef-prepared plates featuring grilled chicken with pineapple salsa and gourmet burgers in a professional kitchen">
   </div>
   <div class="hero-content">
     <div class="badge">★ Feeding The Row Since 2011</div>
@@ -710,11 +650,8 @@
       <h2 class="section-title">Why On-Site Matters During the Games</h2>
       <p>Los Angeles will welcome over 15 million visitors during the 2028 Games. USC's campus is the official Olympic Media Village, and the Coliseum — just steps from The Row — will host the opening ceremony and track &amp; field events. The surrounding neighborhood will see unprecedented traffic, demand, and congestion. Restaurants will have weeks-long waitlists. Delivery apps will be unreliable. Having a dedicated, on-site private chef isn't a luxury during the Olympics — it's a necessity.</p>
     </div>
-    <div class="olympic-image-placeholder">
-      <div>
-        <span>Image</span>
-        <p>USC campus / Row houses — twilight skyline or daytime shot</p>
-      </div>
+    <div class="olympic-image">
+      <img src="images/salad-bar.jpg" alt="Fresh ingredient salad bar with colorful vegetables, proteins, and toppings ready for custom meals">
     </div>
   </div>
 </section>
@@ -722,8 +659,8 @@
 <!-- ════════ ABOUT ════════ -->
 <section class="about">
   <div class="about-inner">
-    <div class="headshot-placeholder">
-      <span>Brian's Headshot</span>
+    <div class="headshot">
+      <img src="images/brian-headshot.jpg" alt="Brian Johnston, Founder and Executive Chef of Greek Grub">
     </div>
     <div class="about-text">
       <h3>Brian Johnston</h3>
