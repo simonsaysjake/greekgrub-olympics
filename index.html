@@ -165,7 +165,7 @@ tailwind.config = {
 
   <!-- Content -->
   <div class="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 pb-16 sm:pb-24 pt-32">
-    <div class="grid lg:grid-cols-[1fr_340px] gap-10 lg:gap-16 items-end">
+    <div class="grid lg:grid-cols-[1fr_480px] gap-10 lg:gap-12 items-end">
     <div>
       <div class="inline-flex items-center gap-2 bg-gold/20 border border-gold/40 text-gold text-xs sm:text-sm font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-6 backdrop-blur-sm animate-on-scroll">
         <span class="text-gold">&#9733;</span> Feeding The Row Since 2011
@@ -207,96 +207,91 @@ tailwind.config = {
 
     <!-- Animated proximity map -->
     <div class="hidden lg:block animate-on-scroll delay-3">
-      <div class="bg-white/[0.07] backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-2xl">
-        <div class="text-white/40 text-[10px] font-semibold uppercase tracking-[3px] mb-4 text-center">Proximity to Olympic Venues</div>
-        <svg viewBox="0 0 280 200" class="w-full" xmlns="http://www.w3.org/2000/svg">
+      <div class="bg-white/[0.07] backdrop-blur-md border border-white/10 rounded-2xl p-8 shadow-2xl">
+        <div class="text-white/40 text-xs font-semibold uppercase tracking-[3px] mb-5 text-center">Proximity to Olympic Venues</div>
+        <svg viewBox="0 0 400 300" class="w-full" xmlns="http://www.w3.org/2000/svg">
           <!-- Grid lines for map feel -->
-          <line x1="0" y1="50" x2="280" y2="50" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-          <line x1="0" y1="100" x2="280" y2="100" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-          <line x1="0" y1="150" x2="280" y2="150" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-          <line x1="70" y1="0" x2="70" y2="200" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-          <line x1="140" y1="0" x2="140" y2="200" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-          <line x1="210" y1="0" x2="210" y2="200" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+          <line x1="0" y1="75" x2="400" y2="75" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+          <line x1="0" y1="150" x2="400" y2="150" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+          <line x1="0" y1="225" x2="400" y2="225" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+          <line x1="100" y1="0" x2="100" y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+          <line x1="200" y1="0" x2="200" y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+          <line x1="300" y1="0" x2="300" y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
 
           <!-- Connection path: The Row → Coliseum -->
-          <path id="path-row-coliseum" d="M90,75 C120,75 130,130 175,135" fill="none" stroke="rgba(245,197,24,0.2)" stroke-width="1.5" stroke-dasharray="4,4"/>
+          <path d="M130,110 C175,110 190,195 260,200" fill="none" stroke="rgba(245,197,24,0.2)" stroke-width="2" stroke-dasharray="6,6"/>
           <!-- Connection path: The Row → SoFi -->
-          <path id="path-row-sofi" d="M90,75 C60,90 45,130 40,155" fill="none" stroke="rgba(245,197,24,0.12)" stroke-width="1" stroke-dasharray="4,4"/>
+          <path d="M130,110 C85,135 65,195 55,235" fill="none" stroke="rgba(245,197,24,0.12)" stroke-width="1.5" stroke-dasharray="5,5"/>
           <!-- Connection path: The Row → Downtown -->
-          <path id="path-row-dtla" d="M90,75 C140,50 180,45 230,50" fill="none" stroke="rgba(245,197,24,0.12)" stroke-width="1" stroke-dasharray="4,4"/>
+          <path d="M130,110 C200,75 265,65 340,72" fill="none" stroke="rgba(245,197,24,0.12)" stroke-width="1.5" stroke-dasharray="5,5"/>
 
           <!-- Flow dots: Row → Coliseum -->
-          <circle r="2.5" fill="#F5C518">
-            <animateMotion dur="2.5s" repeatCount="indefinite" path="M90,75 C120,75 130,130 175,135"/>
+          <circle r="3.5" fill="#F5C518">
+            <animateMotion dur="2.5s" repeatCount="indefinite" path="M130,110 C175,110 190,195 260,200"/>
             <animate attributeName="opacity" values="0;1;1;0" dur="2.5s" repeatCount="indefinite"/>
           </circle>
-          <circle r="2" fill="#F5C518">
-            <animateMotion dur="2.5s" repeatCount="indefinite" path="M90,75 C120,75 130,130 175,135" begin="0.8s"/>
+          <circle r="2.5" fill="#F5C518">
+            <animateMotion dur="2.5s" repeatCount="indefinite" path="M130,110 C175,110 190,195 260,200" begin="0.8s"/>
             <animate attributeName="opacity" values="0;1;1;0" dur="2.5s" repeatCount="indefinite" begin="0.8s"/>
           </circle>
           <!-- Flow dots: Row → SoFi -->
-          <circle r="1.5" fill="#F5C518">
-            <animateMotion dur="3s" repeatCount="indefinite" path="M90,75 C60,90 45,130 40,155"/>
+          <circle r="2" fill="#F5C518">
+            <animateMotion dur="3s" repeatCount="indefinite" path="M130,110 C85,135 65,195 55,235"/>
             <animate attributeName="opacity" values="0;0.7;0.7;0" dur="3s" repeatCount="indefinite"/>
           </circle>
           <!-- Flow dots: Row → DTLA -->
-          <circle r="1.5" fill="#F5C518">
-            <animateMotion dur="3.2s" repeatCount="indefinite" path="M90,75 C140,50 180,45 230,50"/>
+          <circle r="2" fill="#F5C518">
+            <animateMotion dur="3.2s" repeatCount="indefinite" path="M130,110 C200,75 265,65 340,72"/>
             <animate attributeName="opacity" values="0;0.7;0.7;0" dur="3.2s" repeatCount="indefinite"/>
           </circle>
 
           <!-- THE ROW — primary location -->
-          <!-- Outer ripple 1 -->
-          <circle cx="90" cy="75" r="6" fill="none" stroke="#F5C518" stroke-width="1">
-            <animate attributeName="r" values="6;28" dur="2.4s" repeatCount="indefinite"/>
+          <circle cx="130" cy="110" r="8" fill="none" stroke="#F5C518" stroke-width="1.5">
+            <animate attributeName="r" values="8;38" dur="2.4s" repeatCount="indefinite"/>
             <animate attributeName="opacity" values="0.5;0" dur="2.4s" repeatCount="indefinite"/>
           </circle>
-          <!-- Outer ripple 2 (offset) -->
-          <circle cx="90" cy="75" r="6" fill="none" stroke="#F5C518" stroke-width="0.8">
-            <animate attributeName="r" values="6;22" dur="2.4s" repeatCount="indefinite" begin="0.8s"/>
+          <circle cx="130" cy="110" r="8" fill="none" stroke="#F5C518" stroke-width="1">
+            <animate attributeName="r" values="8;30" dur="2.4s" repeatCount="indefinite" begin="0.8s"/>
             <animate attributeName="opacity" values="0.3;0" dur="2.4s" repeatCount="indefinite" begin="0.8s"/>
           </circle>
-          <!-- Glow -->
-          <circle cx="90" cy="75" r="10" fill="#F5C518" opacity="0.15">
-            <animate attributeName="r" values="10;14;10" dur="2s" repeatCount="indefinite"/>
+          <circle cx="130" cy="110" r="14" fill="#F5C518" opacity="0.15">
+            <animate attributeName="r" values="14;20;14" dur="2s" repeatCount="indefinite"/>
             <animate attributeName="opacity" values="0.15;0.08;0.15" dur="2s" repeatCount="indefinite"/>
           </circle>
-          <!-- Core dot -->
-          <circle cx="90" cy="75" r="5" fill="#F5C518">
-            <animate attributeName="r" values="5;6;5" dur="1.6s" repeatCount="indefinite"/>
+          <circle cx="130" cy="110" r="7" fill="#F5C518">
+            <animate attributeName="r" values="7;8.5;7" dur="1.6s" repeatCount="indefinite"/>
           </circle>
-          <!-- Label -->
-          <text x="90" y="60" text-anchor="middle" fill="white" font-size="10" font-weight="700" font-family="Plus Jakarta Sans, sans-serif">THE ROW</text>
-          <text x="90" y="95" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="7.5" font-family="Plus Jakarta Sans, sans-serif">Greek Grub HQ</text>
+          <text x="130" y="88" text-anchor="middle" fill="white" font-size="15" font-weight="700" font-family="Plus Jakarta Sans, sans-serif">THE ROW</text>
+          <text x="130" y="140" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-size="11" font-family="Plus Jakarta Sans, sans-serif">Greek Grub HQ</text>
 
           <!-- LA COLISEUM -->
-          <circle cx="175" cy="135" r="4" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1">
-            <animate attributeName="r" values="4;16" dur="2.8s" repeatCount="indefinite"/>
+          <circle cx="260" cy="200" r="6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5">
+            <animate attributeName="r" values="6;22" dur="2.8s" repeatCount="indefinite"/>
             <animate attributeName="opacity" values="0.3;0" dur="2.8s" repeatCount="indefinite"/>
           </circle>
-          <circle cx="175" cy="135" r="4" fill="white" opacity="0.8">
-            <animate attributeName="r" values="3.5;4.5;3.5" dur="2s" repeatCount="indefinite"/>
+          <circle cx="260" cy="200" r="6" fill="white" opacity="0.8">
+            <animate attributeName="r" values="5;7;5" dur="2s" repeatCount="indefinite"/>
           </circle>
-          <text x="175" y="155" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="8" font-weight="600" font-family="Plus Jakarta Sans, sans-serif">LA Coliseum</text>
-          <text x="175" y="165" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="6.5" font-family="Plus Jakarta Sans, sans-serif">0.5 mi away</text>
+          <text x="260" y="225" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="12" font-weight="600" font-family="Plus Jakarta Sans, sans-serif">LA Coliseum</text>
+          <text x="260" y="242" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="10" font-family="Plus Jakarta Sans, sans-serif">0.5 mi away</text>
 
           <!-- SoFi STADIUM -->
-          <circle cx="40" cy="155" r="3" fill="white" opacity="0.5">
-            <animate attributeName="r" values="2.5;3.5;2.5" dur="2.2s" repeatCount="indefinite"/>
+          <circle cx="55" cy="235" r="4.5" fill="white" opacity="0.5">
+            <animate attributeName="r" values="3.5;5;3.5" dur="2.2s" repeatCount="indefinite"/>
           </circle>
-          <text x="40" y="172" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-size="7" font-weight="500" font-family="Plus Jakarta Sans, sans-serif">SoFi Stadium</text>
-          <text x="40" y="181" text-anchor="middle" fill="rgba(255,255,255,0.25)" font-size="6" font-family="Plus Jakarta Sans, sans-serif">12 mi</text>
+          <text x="55" y="258" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="11" font-weight="500" font-family="Plus Jakarta Sans, sans-serif">SoFi Stadium</text>
+          <text x="55" y="272" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="9" font-family="Plus Jakarta Sans, sans-serif">12 mi</text>
 
           <!-- DOWNTOWN LA -->
-          <circle cx="230" cy="50" r="3" fill="white" opacity="0.5">
-            <animate attributeName="r" values="2.5;3.5;2.5" dur="2.6s" repeatCount="indefinite"/>
+          <circle cx="340" cy="72" r="4.5" fill="white" opacity="0.5">
+            <animate attributeName="r" values="3.5;5;3.5" dur="2.6s" repeatCount="indefinite"/>
           </circle>
-          <text x="230" y="40" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-size="7" font-weight="500" font-family="Plus Jakarta Sans, sans-serif">Downtown LA</text>
-          <text x="230" y="30" text-anchor="middle" fill="rgba(255,255,255,0.25)" font-size="6" font-family="Plus Jakarta Sans, sans-serif">4 mi</text>
+          <text x="340" y="58" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="11" font-weight="500" font-family="Plus Jakarta Sans, sans-serif">Downtown LA</text>
+          <text x="340" y="44" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="9" font-family="Plus Jakarta Sans, sans-serif">4 mi</text>
 
-          <!-- Distance badge -->
-          <rect x="115" y="97" width="50" height="18" rx="9" fill="rgba(245,197,24,0.15)" stroke="rgba(245,197,24,0.3)" stroke-width="0.5"/>
-          <text x="140" y="109" text-anchor="middle" fill="#F5C518" font-size="7" font-weight="600" font-family="Plus Jakarta Sans, sans-serif">0.5 miles</text>
+          <!-- Distance badge on path -->
+          <rect x="170" y="143" width="70" height="24" rx="12" fill="rgba(245,197,24,0.15)" stroke="rgba(245,197,24,0.3)" stroke-width="0.8"/>
+          <text x="205" y="159" text-anchor="middle" fill="#F5C518" font-size="10" font-weight="600" font-family="Plus Jakarta Sans, sans-serif">0.5 miles</text>
         </svg>
       </div>
     </div>
